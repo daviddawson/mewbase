@@ -79,8 +79,52 @@
             <scope>test</scope>
         </dependency>
 
+        <dependency>
+            <groupId>io.muoncore</groupId>
+            <artifactId>muon-core</artifactId>
+            <version>7.3.3</version>
+        </dependency>
+        <dependency>
+            <groupId>io.muoncore.transport</groupId>
+            <artifactId>muon-amqp</artifactId>
+            <version>0.0.8</version>
+        </dependency>
+        <dependency>
+            <groupId>io.muoncore.protocol</groupId>
+            <artifactId>stack-event</artifactId>
+            <version>0.0.1</version>
+        </dependency>
+        <dependency>
+            <groupId>io.muoncore.protocol</groupId>
+            <artifactId>stack-rpc</artifactId>
+            <version>0.0.1</version>
+        </dependency>
+        <dependency>
+            <groupId>io.muoncore.protocol</groupId>
+            <artifactId>stack-reactive-streams</artifactId>
+            <version>0.0.1</version>
+        </dependency>
 
+        <dependency>
+            <groupId>io.reactivex.rxjava2</groupId>
+            <artifactId>rxjava</artifactId>
+            <version>2.1.2</version>
+        </dependency>
     </dependencies>
+
+    <repositories>
+        <repository>
+            <id>muon</id>
+            <name>muoncore-releases</name>
+            <url>https://simplicityitself.jfrog.io/simplicityitself/muon</url>
+        </repository>
+        <repository>
+            <id>muonsnap</id>
+            <name>muoncore-releases</name>
+            <url>https://simplicityitself.jfrog.io/simplicityitself/muon-snapshot</url>
+            <snapshots></snapshots>
+        </repository>
+    </repositories>
 
     <build>
         <pluginManagement>

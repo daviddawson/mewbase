@@ -11,6 +11,7 @@ import io.mewbase.server.impl.file.af.AFFileAccess;
 import io.mewbase.server.impl.log.FramingOps;
 import io.mewbase.server.impl.log.LogImpl;
 import io.mewbase.server.impl.proj.ProjectionManager;
+import io.mewbase.server.impl.transport.muon.MuonApi;
 import io.mewbase.server.impl.transport.net.NetTransport;
 import io.mewbase.util.AsyncResCF;
 import io.vertx.core.Vertx;
@@ -79,6 +80,7 @@ public class ServerImpl implements Server {
         this.projectionManager = new ProjectionManager(this);
         this.cqrsManager = new CQRSManager(this);
         this.restServiceAdaptor = new RESTServiceAdaptor(this);
+        new MuonApi(this);
     }
 
     ServerImpl(ServerOptions serverOptions) {
